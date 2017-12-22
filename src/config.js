@@ -2,24 +2,19 @@ import Cookies from 'js-cookie'
 let globals = {
   mockEnv: 'test',
   version: '1.0', // 版本号
-  unifiedUserHost: 'https://newuat-oauth2.health.ikang.com', // 统一登录
-  payment: 'http://newuat.paynew.ikang.com/', // 统一支付
-  host: 'http://192.168.98.75:7777/servicev1/', // 接口地址
+  unifiedUserHost: '', // 统一登录
+  payment: '', // 统一支付
+  host: '', // 接口地址
   domain: '',
   authorization: 'Basic MGQzZDNmNjgtNjhhNC00OTdhLTgyZDMtYTY5OTdjNzhhMGQ3OjcyOTRmNjQ0LWU4MWEtNGFlZC05YTVlLWMzNzA0NzAzY2ZkNw==',
   hostServe: {
-    test: 'http://192.168.98.75:7777/service/v1/', // 测试
-    // test: 'http://192.168.98.104/appService/',
-    // test: 'http://192.168.99.60:8090/appService/',
-    uat: 'https://newuat-ikapp.health.ikang.com/appService/', //  远程服务器体检宝UAT 环境
-    pre: 'https://pre-ikapp.health.ikang.com/appService/',
-    prod: 'https://ikapp.health.ikang.com/appService/' //  远程服务器体检宝prod 环境
+    test: '', // 测试
+    uat: '', //  远程服务器体检宝UAT 环境
+    pre: '',
+    prod: '' //  远程服务器体检宝prod 环境
   },
   domainServe: {
-    test: '.ikang.com',
-    uat: '.ikang.com',
-    pre: '.ikang.com',
-    prod: '.ikang.com'
+    test: ''
   },
   cookieProp: {path: '/'},
   origin: '',
@@ -39,7 +34,7 @@ let globals = {
     let nowHostValue = window.location.hostname
     let preIndex = nowHostValue.indexOf('.')
     let preHostName = nowHostValue.substring(0, preIndex)
-    if (nowHostValue === 'localhost' || nowHostValue.indexOf('192.168.') > -1 || nowHostValue.indexOf('172.16.') > -1 || nowHostValue === 'ite.my.ikang.com') {
+    if (nowHostValue === 'localhost' || nowHostValue.indexOf('192.168.') > -1 || nowHostValue.indexOf('172.16.') > -1 || nowHostValue === 'ite.my.magic.com') {
       let mockEnv = globals.mockEnv
       globals.host = globals.hostServe[mockEnv]
       console.log(globals.hostServe[mockEnv])
