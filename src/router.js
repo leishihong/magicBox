@@ -21,7 +21,7 @@ const registerRoute = (config) => {
 const routes = registerRoute(RouterConfig).arrayRoutes
 
 const router = new VueRouter({
-  base: '/es/',
+  base: '/magic/',
   mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
@@ -35,7 +35,7 @@ const router = new VueRouter({
 
 let indexScrollTop = 0
 router.beforeEach((route, redirect, next) => {
-  let title = route.meta.title + '-爱康'
+  let title = route.meta.title + '-星仔魔盒'
   document.title = title || ''
   if (route.hash !== '') {
     const id = route.hash.replace('#', '')
