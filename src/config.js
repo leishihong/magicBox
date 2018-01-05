@@ -2,16 +2,16 @@ import Cookies from 'js-cookie'
 let globals = {
   mockEnv: 'test',
   version: '1.0', // 版本号
-  unifiedUserHost: '', // 统一登录
-  payment: '', // 统一支付
+  unifiedUserHost: '', 
+  payment: '', 
   host: '', // 接口地址
   domain: '',
-  authorization: 'Basic MGQzZDNmNjgtNjhhNC00OTdhLTgyZDMtYTY5OTdjNzhhMGQ3OjcyOTRmNjQ0LWU4MWEtNGFlZC05YTVlLWMzNzA0NzAzY2ZkNw==',
+  authorization: '',
   hostServe: {
-    test: '', // 测试
-    uat: '', //  远程服务器体检宝UAT 环境
+    test: '', // 
+    uat: '', // 
     pre: '',
-    prod: '' //  远程服务器体检宝prod 环境
+    prod: '' //  
   },
   domainServe: {
     test: ''
